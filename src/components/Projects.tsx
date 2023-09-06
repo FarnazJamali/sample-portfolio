@@ -5,7 +5,7 @@ export const Projects = () => {
   return (
     <div id="projects" className="py-14">
       <h3 className="font-medium text-center mb-5 ">{FA_IR.Projects}</h3>
-      <div className="px-4 md:mx-auto md:w-[720px] lg:w-[940px]">
+      <div className="px-4 mx-5 md:mx-auto md:w-[700px] lg:w-[940px]">
         {Projects_data.map((item) => (
           <div className="flex bg-slate-50 my-10 shadow-xl rounded-md">
             <img className="hidden md:block" src={item.img} />

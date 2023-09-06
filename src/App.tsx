@@ -1,9 +1,18 @@
-import { About, Education, Experience, Footer, Header, Lead, Projects, Skills } from "./components"
+import {
+  About,
+  Contact,
+  Education,
+  Experience,
+  Footer,
+  Header,
+  Lead,
+  Projects,
+  Skills,
+} from './components'
 
 function App() {
-
   return (
-      <div>
+    <div>
       <Header />
       <Lead />
       <About />
@@ -11,8 +20,9 @@ function App() {
       <Projects />
       <Education />
       <Skills />
-      <Footer/>
-      </div>
+      <Contact />
+      <Footer />
+    </div>
   )
 }
 
