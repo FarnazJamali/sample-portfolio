@@ -7,7 +7,7 @@ export const Experience = () => {
       <h3 className="font-medium text-center mb-10">{FA_IR.Experience}</h3>
       <div className="relative blue-line">
         {Experience_Data.map((item) => (
-          <div className="flex">
+          <div className="flex" key={item.experienceTitle}>
             <div className="hidden md:block md:w-1/4">
               <span>{item.duration}</span>
               <i className="fa-solid fa-location-pin text-3xl text-[#3498db]"></i>

@@ -7,7 +7,7 @@ export const Projects = () => {
       <h3 className="font-medium text-center mb-5 ">{FA_IR.Projects}</h3>
       <div className="px-4 mx-5 md:mx-auto md:w-[700px] lg:w-[940px]">
         {Projects_data.map((item) => (
-          <div className="flex bg-slate-50 my-10 shadow-xl rounded-md">
+          <div className="flex bg-slate-50 my-10 shadow-xl rounded-md" key={item.title}>
             <img className="hidden md:block" src={item.img} />
             <div className='p-4'>
               <h5 className='font-bold mb-3'>{item.title}</h5>

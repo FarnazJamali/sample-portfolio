@@ -21,7 +21,7 @@ export const Header = () => {
       {/*  */}
       <ul className="md:w-fit hidden md:flex rounded-b-lg p-3 shadow-lg bg-white">
         {Menu_Data.map((item) => (
-          <li className="hover:text-teal-600 font-bold p-3">
+          <li className="hover:text-teal-600 font-bold p-3" key={item.title}>
             <a href={item.url}>{item.title}</a>
           </li>
         ))}
