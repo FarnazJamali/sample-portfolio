@@ -1,6 +1,12 @@
 import { useForm } from 'react-hook-form'
-import { FA_IR } from '../Language'
 import pb from '../lib/pocketbase'
+import { yupResolver } from '@hookform/resolvers/yup'
+import * as yup from 'yup'
+import { FA_IR } from '../Language'
+import { schema } from './constant/Contact'
+
+type FormData = yup.InferType<typeof schema>
+const defaultValues = { email: '', message: '' }
 
 export const Contact = () => {
   const {
@@ -8,18 +14,28 @@ export const Contact = () => {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm()
+  } = useForm<FormData>({
+    resolver: yupResolver(schema),
+    defaultValues,
+  })
 
-  // const sendMessage = {}
+  //* Post request for sending message
+  const record = async ({
+    email,
+    message,
+  }: {
+    email: string
+    message: string
+  }) => await pb.collection('message').create({ email, message })
 
-//   const record = await pb.collection('demo').create({
-//     title: 'Lorem ipsum',
-// });
   return (
     <div id="contact" className="bg-teal-100/50 py-14">
       <h3 className="font-medium text-center mb-10">{FA_IR.Contact}</h3>
       <form
-        onSubmit={handleSubmit((data) => console.log(data))}
+        onSubmit={handleSubmit((data) => {
+          record(data)
+          console.log(data)
+        })}
         className="flex-col md:w-[700px] md:mx-auto mx-10"
       >
         <input
@@ -28,14 +44,17 @@ export const Contact = () => {
           {...register('email')}
           placeholder={FA_IR.Email}
         />
+        {errors.email && <p className="text-red-600">{errors.email.message}</p>}
         <textarea
-          
           id="message"
           className="rounded-md p-3 my-4 w-full"
           rows={5}
           {...register('message')}
           placeholder={FA_IR.MessageText}
         />
+        {errors.message && (
+          <p className="text-red-600">{errors.message.message}</p>
+        )}
         <button
           type="submit"
           className="block rounded-md p-3 w-full bg-teal-600 text-white"

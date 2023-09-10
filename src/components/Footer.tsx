@@ -3,10 +3,10 @@ import { Menu_Data } from '../mock'
 
 export const Footer = () => {
   return (
-    <footer className="flex-col items-center justify-center bg-slate-300 h-20">
-      <ul className="flex justify-center items-center">
+    <footer className="flex-col items-center justify-center bg-slate-300 h-fit">
+      <ul className="flex flex-col md:flex-row justify-center items-center">
         {Menu_Data.map((item) => (
-          <li className="hover:text-teal-600 font-bold p-3" key={item.title}>
+          <li className="hover:text-teal-600 md:font-bold p-3" key={item.title}>
             <a href={item.url}>{item.title}</a>
           </li>
         ))}

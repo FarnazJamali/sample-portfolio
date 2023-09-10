@@ -22,5 +22,8 @@ export const FA_IR = {
   Message: "ارسال پیام",
   MessageText: "متن پیام",
   Email: "ایمیل خود را وارد کنید",
-  MadeWithLove:"فرفر"
+  MadeWithLove: "فرفر",
+  EmailError: "ایمیل را وارد کنید",
+  EmailFormat: "فرمت ایمیل نامناسب است",
+  MessageError:'پیام خالی قابل ارسال نیست'
 };
