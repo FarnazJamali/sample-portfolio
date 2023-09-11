@@ -1,3 +1,4 @@
+import { ToastContainer } from 'react-toastify'
 import {
   About,
   Contact,
@@ -21,6 +22,7 @@ function App() {
       <Education />
       <Skills />
       <Contact />
+      <ToastContainer rtl/>
       <Footer />
     </div>
   )

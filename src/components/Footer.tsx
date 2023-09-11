@@ -1,5 +1,6 @@
 import { FA_IR } from '../Language'
 import { Menu_Data } from '../mock'
+import { FaHeart } from 'react-icons/fa6'
 
 export const Footer = () => {
   return (
@@ -11,9 +12,13 @@ export const Footer = () => {
           </li>
         ))}
       </ul>
-      <p className="text-center text-sm mt-3">
-        <span>{FA_IR.MadeWithLove}</span>
-        <i className="fa-solid fa-heart"></i>
+      <p className="text-center text-sm py-3">
+        <a href="https://www.linkedin.com/in/farnaz-jamali/">
+          <span className="">{FA_IR.MadeWithLove} </span>
+          <span className="inline-block">
+            <FaHeart />
+          </span>
+        </a>
       </p>
     </footer>
   )

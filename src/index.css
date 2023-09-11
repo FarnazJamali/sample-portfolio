@@ -3,7 +3,7 @@
   h1,
   h2,
   h3 {
-    @apply font-bold text-gray-800;
+    @apply font-bold ;
   }
   h1 {
     @apply text-5xl;
@@ -42,7 +42,7 @@
   top: 0;
   bottom: 0;
   left: auto;
-  right: -13px;
+  right: -10px;
   height: 100%;
   width: 3px;
   background: #3498db;
@@ -50,6 +50,6 @@
 }
 @media (min-width: 768px) {
   .blue-line:before {
-   right: 170px;
+    right: 170px;
   }
 }

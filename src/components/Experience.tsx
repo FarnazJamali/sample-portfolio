@@ -1,5 +1,6 @@
 import { FA_IR } from '../Language'
 import { Experience_Data } from '../mock'
+import { FaLocationPin } from 'react-icons/fa6'
 
 export const Experience = () => {
   return (
@@ -10,10 +11,11 @@ export const Experience = () => {
           <div className="flex" key={item.experienceTitle}>
             <div className="hidden md:block md:w-1/4">
               <span>{item.duration}</span>
-              <i className="fa-solid fa-location-pin text-3xl text-[#3498db]"></i>
+              <span className='absolute right-[157px] text-3xl text-[#3498db]'><FaLocationPin /></span>            
             </div>
+            
             <div className="w-8 md:hidden">
-              <i className="absolute -right-6 fa-solid fa-location-pin text-3xl text-[#3498db]"></i>
+              <span className='absolute -right-6 text-3xl text-[#3498db]'><FaLocationPin /></span>
             </div>
 
             <div className="w-[calc(100%-30px)] md:w-3/4">

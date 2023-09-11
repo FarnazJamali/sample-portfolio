@@ -2,11 +2,20 @@ import { FA_IR } from '../Language'
 
 export const Lead = () => {
   return (
-    <div className="h-screen bg-teal-500/50 -mt-20 flex items-center justify-center">
-      <div className=''>
-        <h1 className='mb-5 '>{FA_IR.Name}</h1>
+    <div className="relative flex items-center justify-center bg-cyan-500/40 -mt-[73px] -z-10">
+      <div className="absolute">
+        <h1 className="mb-5 ">{FA_IR.Name}</h1>
         <h4>{FA_IR.Specialty}</h4>
       </div>
+      <div
+        className="h-screen w-full"
+        style={{
+          backgroundImage: 'url(/image/leadBackground.jpg)',
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          opacity: 0.2,
+        }}
+      ></div>
     </div>
   )
 }

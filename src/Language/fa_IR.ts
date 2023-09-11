@@ -22,8 +22,9 @@ export const FA_IR = {
   Message: "ارسال پیام",
   MessageText: "متن پیام",
   Email: "ایمیل خود را وارد کنید",
-  MadeWithLove: "فرفر",
+  MadeWithLove: "طراحی و اجرا توسط فرناز ",
   EmailError: "ایمیل را وارد کنید",
   EmailFormat: "فرمت ایمیل نامناسب است",
-  MessageError:'پیام خالی قابل ارسال نیست'
+  MessageError: 'پیام خالی قابل ارسال نیست',
+  ToastMessageSent:"پیام شما با موفقیت ارسال شد و در اولین فرصت به آن پاسخ داده خواهد شد."
 };
