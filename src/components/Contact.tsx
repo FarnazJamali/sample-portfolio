@@ -1,9 +1,12 @@
 import { useForm } from 'react-hook-form'
-import pb from '../lib/pocketbase'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import { FA_IR } from '../Language'
 import { schema } from './constant/Contact'
+import PocketBase from 'pocketbase'
+
+const url = 'https://sample-portfolio.pockethost.io/'
+const client = new PocketBase(url)
 
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -22,7 +25,7 @@ export const Contact = () => {
     defaultValues,
   })
 
-const notify = () => toast.success(FA_IR.ToastMessageSent)
+  const notify = () => toast.success(FA_IR.ToastMessageSent)
 
   //* Post request for sending message
   const record = async ({
@@ -32,7 +35,9 @@ const notify = () => toast.success(FA_IR.ToastMessageSent)
     email: string
     message: string
   }) => {
-    const response = await pb.collection('message').create({ email, message })
+    const response = await client
+      .collection('Message')
+      .create({ email, message })
     response.collectionId ? notify() : console.log('error')
   }
 
@@ -45,7 +50,6 @@ const notify = () => toast.success(FA_IR.ToastMessageSent)
         })}
         className="flex-col md:w-[700px] md:mx-auto mx-10"
       >
-        
         <input
           type="email"
           className="block rounded-md w-full p-2"
