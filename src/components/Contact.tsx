@@ -44,6 +44,17 @@ export const Contact = () => {
   return (
     <div id="contact" className="bg-teal-100/50 py-14">
       <h3 className="font-medium text-center mb-10">{FA_IR.Contact}</h3>
+      <div className="flex-col md:w-[700px] md:mx-auto m-5">
+        <p>{FA_IR.ContactInfo}</p>
+        <address>
+          <a className="my-2 block text-sm" href="mailto:Abolqeisi@gmail.com">
+            {FA_IR.ElaheEmail}
+          </a>
+          <a className="text-sm" href="tel:989336563333">
+            {FA_IR.ElahePhone}
+          </a>
+        </address>
+      </div>
       <form
         onSubmit={handleSubmit((data) => {
           record(data).finally(reset)

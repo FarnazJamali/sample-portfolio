@@ -1,13 +1,13 @@
 import { ToastContainer } from 'react-toastify'
 import {
   About,
+  Articles,
   Contact,
   Education,
   Experience,
   Footer,
   Header,
   Lead,
-  Projects,
   Skills,
 } from './components'
 
@@ -18,7 +18,7 @@ function App() {
       <Lead />
       <About />
       <Experience />
-      <Projects />
+      <Articles />
       <Education />
       <Skills />
       <Contact />

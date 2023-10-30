@@ -6,6 +6,7 @@ export const Lead = () => {
       <div className="absolute">
         <h1 className="mb-5 ">{FA_IR.Name}</h1>
         <h4>{FA_IR.Specialty}</h4>
+        <h4 className='mt-3'>{FA_IR.Specialty2}</h4>
       </div>
       <div
         className="h-screen w-full"

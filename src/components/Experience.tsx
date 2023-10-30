@@ -19,7 +19,7 @@ export const Experience = () => {
           </span>
         </div>
 
-        <h4 className="mb-5 md:text-center">{FA_IR.CompanyName}</h4>
+        <h4 className="m-5 md:text-center">{FA_IR.CompanyName}</h4>
 
         {Experience_Data.map((item) => (
           <div
